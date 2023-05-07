@@ -30,6 +30,7 @@ github_username:  calvincramer
 linkedin_username: calvincramer
 
 show_excerpts: true
+future: true
 
 sass:
     style: compressed
