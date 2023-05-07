@@ -1,6 +1,6 @@
 /* Reset some basic elements */
 body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
+p, blockquote, pre,
 dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
@@ -22,12 +22,12 @@ body {
   flex-direction: column;
 }
 
-/* Set `margin-bottom` to maintain vertical rhythm */
+/* vertical spacing */
 h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
+p, blockquote, pre, hr,
 ul, ol, dl, figure,
 %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 2);
+  margin-bottom: calc($spacing-unit / 3);
 }
 
 /* main element */
@@ -35,13 +35,11 @@ main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
 
-/* Images */
 img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* Figures */
 figure > img {
   display: block;
 }
@@ -90,9 +88,12 @@ a {
   }
 }
 
-/* Blockquotes */
+hr {
+  color: $accent-color-lighter;
+}
+
 blockquote {
-  color: $accent-color;
+  color: $accent-color-light;
   border-left: 4px solid $accent-color-light;
   padding-left: calc($spacing-unit / 2);
   @include relative-font-size(1.125);

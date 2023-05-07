@@ -21,6 +21,7 @@ $background-color-light3: lighten($background-color, 15%);
 
 $accent-color:       #da5b28 !default;
 $accent-color-light: lighten($accent-color, 15%) !default;
+$accent-color-lighter: lighten($accent-color, 30%) !default;
 $accent-color-dark:  darken($accent-color, 15%) !default;
 $accent-color-darker:  darken($accent-color, 30%) !default;
 
