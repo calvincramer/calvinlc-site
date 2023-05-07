@@ -11,13 +11,32 @@ $base-line-height: 1.5 !default;
 $spacing-unit:     30px !default;
 
 $text-color:       #d1eff3 !default;
-$background-color: #131d25 !default;
 $link-color:      #4289e6 !default;
+
+$background-color: #131d25 !default;
+$background-color-light1: lighten($background-color, 3%);
+$background-color-light2: lighten($background-color, 10%);
 
 $accent-color:       #da5b28 !default;
 $accent-color-light: lighten($accent-color, 15%) !default;
 $accent-color-dark:  darken($accent-color, 15%) !default;
 $accent-color-darker:  darken($accent-color, 30%) !default;
+
+$comment-color: hsl(43, 10%, 40%) !default;
+$string-color: hsl(35, 50%, 50%) !default;
+$string-escape: hsl(50, 70%, 70%) !default;
+$literal-color: hsl(185, 70%, 50%) !default;
+$literal-hex-color: hsl(190, 70%, 50%) !default;
+$literal-oct-color: hsl(195, 70%, 50%) !default;
+$literal-float-color: hsl(278, 60%, 60%) !default;
+$operator-color: darken($text-color, 20%) !default;
+$keyword-color: hsl(18, 50%, 60%) !default; // python def, return, class, pass
+$builtin-color: hsl(9, 55%, 55%) !default; // python builtin types (int, bool, etc)
+$pseudo-bool-color: $builtin-color !default;
+$class-color: hsl(100, 55%, 55%) !default;
+$function-color: hsl(60, 50%, 50%) !default;
+$error-color: hsl(22, 80%, 55%) !default;
+$undefined-color: hsl(300, 100%, 50%) !default;
 
 $table-text-align: left !default;
 
@@ -45,7 +64,6 @@ $on-laptop:        800px !default;
 
 // Import partials.
 @import
-  "minima/base",
-  "minima/layout",
-  "minima/syntax-highlighting"
+  "base",
+  "layout"
 ;
