@@ -9,20 +9,19 @@ export PATH="${HOME}/gems/bin:${PATH}"
 
 
 # Run locally
-- run in `site/`
-```sh
-bundle exec jekyll serve
-```
+`local.sh`
 
 # Build and Deploy Site
-- run in `site/`
-- `bundle install`
-- if need to commit, then commit
-
-
+`deploy.sh`
 
 
 # ETC
+- See resolution of website
 ```sh
 dig www.calvinlc.com +nostats +nocomments +nocmd
+```
+
+- ssh to website host
+```sh
+ssh calvinlc@chi110.greengeeks.net
 ```
