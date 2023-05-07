@@ -13,3 +13,16 @@ export PATH="${HOME}/gems/bin:${PATH}"
 ```sh
 bundle exec jekyll serve
 ```
+
+# Build and Deploy Site
+- run in `site/`
+- `bundle install`
+- if need to commit, then commit
+
+
+
+
+# ETC
+```sh
+dig www.calvinlc.com +nostats +nocomments +nocmd
+```
