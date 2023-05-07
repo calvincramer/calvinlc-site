@@ -31,6 +31,20 @@ linkedin_username: calvincramer
 
 show_excerpts: true
 
+sass:
+    style: compressed
+
+compress_html:
+    clippings: all
+    comments: all
+    endings: all
+    startings: [html, head, body]
+    ignore:
+        envs: [local]
+    blanklines: false
+    profile: false
+
+
 # Build settings
 # theme: minima
 

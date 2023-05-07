@@ -7,7 +7,7 @@ cd "$(dirname ${BASH_SOURCE[0]})"
 cd site
 
 # Build to "_site/" folder
-bundle exec jekyll build
+JEKYLL_ENV=production bundle exec jekyll build
 
 # Deploy
 tar -czf site.tar.gz -C _site/ .

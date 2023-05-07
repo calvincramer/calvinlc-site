@@ -44,3 +44,7 @@ _data       # ?
 - `bundle info --path minima`
 - uses `liquid` for variable substitution
     - https://jekyllrb.com/docs/liquid/
+
+
+# Compress HTML
+- https://github.com/penibelst/jekyll-compress-html/

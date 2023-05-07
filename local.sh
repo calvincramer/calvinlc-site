@@ -6,4 +6,4 @@ set -x
 cd "$(dirname ${BASH_SOURCE[0]})"
 cd site
 
-bundle exec jekyll serve
+JEKYLL_ENV=local bundle exec jekyll serve
