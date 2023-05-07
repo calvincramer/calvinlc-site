@@ -15,7 +15,9 @@ $link-color:      #4289e6 !default;
 
 $background-color: #131d25 !default;
 $background-color-light1: lighten($background-color, 3%);
+$background-color-light1half: lighten($background-color, 6%);
 $background-color-light2: lighten($background-color, 10%);
+$background-color-light3: lighten($background-color, 15%);
 
 $accent-color:       #da5b28 !default;
 $accent-color-light: lighten($accent-color, 15%) !default;
