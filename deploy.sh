@@ -21,4 +21,3 @@ ssh calvinlc@chi110.greengeeks.net '
     tar -xf site.tar.gz &&
     rm site.tar.gz
 '
-

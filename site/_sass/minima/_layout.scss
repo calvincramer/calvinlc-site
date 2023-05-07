@@ -1,11 +1,9 @@
-/**
- * Site header
- */
+/* Site header */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
-  border-bottom: 1px solid $grey-color-light;
+  padding-top: 5px;
+  // border-top: 5px solid $accent-color-dark;
+  border-bottom: 1px solid $accent-color-darker;
   min-height: $spacing-unit * 1.865;
-
   // Positioning context for the mobile navigation icon
   position: relative;
 }
@@ -20,7 +18,7 @@
 
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $accent-color;
   }
 }
 
@@ -51,7 +49,7 @@
     top: 9px;
     right: calc($spacing-unit / 2);
     background-color: $background-color;
-    border: 1px solid $grey-color-light;
+    border: 1px solid $accent-color-light;
     border-radius: 5px;
     text-align: right;
 
@@ -74,7 +72,7 @@
       text-align: center;
 
       > svg {
-        fill: $grey-color-dark;
+        fill: $accent-color;
       }
     }
 
@@ -100,19 +98,22 @@
   }
 }
 
-
-
-/**
- * Site footer
- */
+/* Site footer */
 .site-footer {
-  border-top: 1px solid $grey-color-light;
+  border-top: 1px solid $accent-color-darker;
   padding: $spacing-unit 0;
 }
 
 .footer-heading {
-  @include relative-font-size(1.125);
-  margin-bottom: calc($spacing-unit / 5);
+  @include relative-font-size(1.225);
+  margin-bottom: calc($spacing-unit / 2);
+  letter-spacing: -1px;
+  font-weight: 300;
+
+  &,
+  &:visited {
+    color: $accent-color;
+  }
 }
 
 .contact-list,
@@ -123,7 +124,7 @@
 
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
-  color: $grey-color;
+  color: $accent-color;
   margin-left: calc(-1 * $spacing-unit / 2);
   @extend %clearfix;
 }
@@ -170,11 +171,7 @@
   }
 }
 
-
-
-/**
- * Page content
- */
+/* Page content */
 .page-content {
   padding: $spacing-unit 0;
   flex: 1;
@@ -199,7 +196,7 @@
 
 .post-meta {
   font-size: $small-font-size;
-  color: $grey-color;
+  color: $accent-color;
 }
 
 .post-link {
@@ -207,11 +204,7 @@
   @include relative-font-size(1.5);
 }
 
-
-
-/**
- * Posts
- */
+/* Posts */
 .post-header {
   margin-bottom: $spacing-unit;
 }
