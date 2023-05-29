@@ -3,6 +3,7 @@ layout: post
 title:  "Drowning in Git Clones"
 date:   2023-05-06 12:12:12 -0000
 categories: p
+published: false
 ---
 
 At some point in the past few years I realized that working on a more and more git repos simultaneously led to forgetting if each clone is kept up to date, so I created a little tool to see the status of many clones at once. I'm really surprised at how useful it has been for my workflow. This tool is essentially looks for git clones recursively like `find` and prints a one-line `git status` message for each.
