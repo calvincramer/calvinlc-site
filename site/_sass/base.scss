@@ -162,7 +162,8 @@ pre {
   .s1    { color: $string-color } // Literal.String.Single
   .s2    { color: $string-color } // Literal.String.Double
   .se    { color: $string-escape } // Literal.String.Escape
-  .si    { color: $string-color} // Literal.String.Interpol
+  .si    { color: $string-color } // Literal.String.Interpol
+  .nv    { color: $keyword-color } // Name.Variable - dollar sign variable in shell
 
   .gd    { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted
   .gd .x { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted.Specific
@@ -186,7 +187,6 @@ pre {
   .nn    { color: $undefined-color; background-color: $undefined-color } // Name.Namespace
   .no    { color: $undefined-color; background-color: $undefined-color } // Name.Constant
   .nt    { color: $undefined-color; background-color: $undefined-color } // Name.Tag
-  .nv    { color: $undefined-color; background-color: $undefined-color } // Name.Variable
   .sb    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Backtick
   .sc    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Char
   .sd    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Doc
