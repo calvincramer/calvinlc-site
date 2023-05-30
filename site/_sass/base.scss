@@ -118,6 +118,10 @@ code {
   padding: 1px 5px;
 }
 
+code-no-wrap {
+  white-space: pre-wrap;
+}
+
 pre {
   padding: 8px 12px;
   overflow-x: auto;
@@ -164,6 +168,8 @@ pre {
   .se    { color: $string-escape } // Literal.String.Escape
   .si    { color: $string-color } // Literal.String.Interpol
   .nv    { color: $keyword-color } // Name.Variable - dollar sign variable in shell
+  .nt    { color: $text-color } // Name.Tag - bash flag
+
 
   .gd    { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted
   .gd .x { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted.Specific
@@ -186,7 +192,6 @@ pre {
   .ni    { color: $undefined-color; background-color: $undefined-color } // Name.Entity
   .nn    { color: $undefined-color; background-color: $undefined-color } // Name.Namespace
   .no    { color: $undefined-color; background-color: $undefined-color } // Name.Constant
-  .nt    { color: $undefined-color; background-color: $undefined-color } // Name.Tag
   .sb    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Backtick
   .sc    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Char
   .sd    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Doc
