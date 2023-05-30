@@ -19,11 +19,11 @@ $background-color-light1half: lighten($background-color, 6%);
 $background-color-light2: lighten($background-color, 10%);
 $background-color-light3: lighten($background-color, 15%);
 
-$accent-color:       #da5b28 !default;
+$accent-color:       #32ada7 !default;  // #da5b28
 $accent-color-light: lighten($accent-color, 15%) !default;
-$accent-color-lighter: lighten($accent-color, 30%) !default;
-$accent-color-dark:  darken($accent-color, 15%) !default;
-$accent-color-darker:  darken($accent-color, 30%) !default;
+$accent-color-lighter: lighten($accent-color, 25%) !default;
+$accent-color-dark:  darken($accent-color, 25%) !default;
+$accent-color-dark:  darken($accent-color, 40%) !default;
 
 $comment-color: hsl(43, 10%, 40%) !default;
 $string-color: hsl(35, 50%, 50%) !default;

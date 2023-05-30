@@ -1,7 +1,5 @@
 /* Reset some basic elements */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
 }
@@ -23,11 +21,16 @@ body {
 }
 
 /* vertical spacing */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-ul, ol, dl, figure,
-%vertical-rhythm {
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
   margin-bottom: calc($spacing-unit / 3);
+}
+
+em {
+  color: $accent-color;
+}
+
+strong {
+  color: $accent-color;
 }
 
 /* main element */
@@ -62,6 +65,7 @@ li {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  color: $accent-color-lighter;
   font-weight: $base-font-weight;
 }
 
@@ -89,7 +93,8 @@ a {
 }
 
 hr {
-  color: $accent-color-lighter;
+  color: $accent-color-dark;
+  width: calc($content-width * 3 / 4);
 }
 
 blockquote {
@@ -118,7 +123,8 @@ code {
   padding: 1px 5px;
 }
 
-code-no-wrap {
+/* Optionally say to wrap the code block */
+.code-no-wrap div pre code {
   white-space: pre-wrap;
 }
 
@@ -237,7 +243,7 @@ pre {
     height: 16px;
     display: inline-block;
     fill: #{$text-color};
-    padding-right: 6px;
+    padding-right: 8px;
     vertical-align: middle;
 }
 

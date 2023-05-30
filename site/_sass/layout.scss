@@ -1,8 +1,7 @@
 /* Site header */
 .site-header {
   padding-top: 5px;
-  // border-top: 5px solid $accent-color-dark;
-  border-bottom: 1px solid $accent-color-darker;
+  border-bottom: 2px solid $accent-color-dark;
   min-height: $spacing-unit * 1.865;
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -105,8 +104,9 @@
 
 /* Site footer */
 .site-footer {
-  border-top: 1px solid $accent-color-darker;
-  padding: $spacing-unit 0;
+  border-top: 1px solid $accent-color-dark;
+  // padding: $spacing-unit 0;
+  padding-top: $spacing-unit;
 }
 
 .footer-heading {
@@ -136,6 +136,7 @@
 
 .footer-col {
   float: left;
+  margin-top: calc($spacing-unit / 5);
   margin-bottom: calc($spacing-unit / 2);
   padding-left: calc($spacing-unit / 2);
 }

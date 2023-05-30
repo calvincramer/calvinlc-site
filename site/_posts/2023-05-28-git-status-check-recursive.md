@@ -12,7 +12,7 @@ The first version of this tool was written in ***python*** (uhg how slow, I know
 
 At first I was *determined* to make a new version in a compiled language in order to optimize for execution speed and correctness. After all, who would want to use my suboptimal **interpreted** script, rather than a *extremely fast* compiled C or Golang program?
 
-***I have since concluded that spending time on a reimplementation is and has been a waste of time***. The first version - even in its hacky and hurried "*this originally took me 20 minutes*" state - worked fine, **great** even. It's worked pretty much perfectly for a long time. *A reimplementation would have no benefit other than an unnoticeable speed improvement and to avoid embarrassment by not using the best fastest language of the month.*
+***I have since concluded that spending time on a reimplementation is and has been a waste of time***. The first version - even in its hacky and hurried state - worked fine, **great** even. It's worked pretty much perfectly for a long time. A reimplementation would have no benefit other than an unnoticeable speed improvement and to avoid embarrassment by not using the best fastest language of the month.
 
 Here is the <A href="#python-code">Python implementation</A>. Here's a similar implementation for <A href="#bash-code">Bash</A> that works well too, and has color. Here's an example of what the outputs look like:
 ```sh
@@ -24,16 +24,15 @@ user@linux:~/repos $ git-status-check-recursive
 ./baz ....... (untracked files)
 ./baf         Good
 
-# Bash version (has color)
+# Bash version (has color not shown here)
 ./foo/.git    good
 ./bar/.git    (2 commits behind) (unstaged changes) (untracked changes)
 ./baz/.git    (3 commits ahead) (staged changes)
 ./baf/.git    (2 commits behind) (unstaged changes) (1 stash)
 ```
 <br>
-This project has been a lesson for me in recognizing what efforts are actually necessary - the classic "*premature optimization is the root of all evil*" idea.
+This project has been a lesson for me in recognizing what efforts are actually necessary - the classic lesson of "*premature optimization is the root of all evil*". I guess this is repentance for my sins :^)
 
-Below is the summarized outcomes of the premature optimizations.
 <br>
 <br>
 <br>
@@ -42,6 +41,8 @@ Below is the summarized outcomes of the premature optimizations.
 
 ---
 
+<br>
+<br>
 
 ## Extra Unnecessary Research, Feel Free To Skip!
 
@@ -297,6 +298,7 @@ Compressed
 #!/usr/bin/env bash
 find . -type d -name '.git' -exec bash -c 'cd {}/..;echo -ne "{}\t";B="\e[1m";G="\e[42m";R="\e[41m";M="\e[45m";N="\e[0m";s=$(git status --porcelain=v2 -b -z | tr "\0" "\n");g=1;[[ "$s" == *"branch.oid (initial)"* ]] && i=1 && g=0;if [ "$i" = "1" ];then echo -n "(initial) ";else [[ "$s" == *"branch.head (detached)"* ]] && h=1 && g=0;if [ "$h" = "1" ];then echo -en "(${R}detached head$N) ";g="0";else a=$(echo "$s" | grep "# branch.ab " | cut -d" " -f3 | cut -c2-);[ "$a" == "1" ] || z="s";[ "$a" != "0" ] && echo -en "($B$a$N commit$z ahead) " && g=0;b=$(echo "$s" | grep "# branch.ab " | cut -d" " -f4 | cut -c2-);[ "$b" == "1" ] || y="s";[ "$b" != "0" ] && echo -en "($B$b$N commit$y behind) " && g=0;fi;fi;echo "$s" | grep -q "^[u12] [^.]." && echo -en "(${G}staged changes$N) " && g=0;echo "$s" | grep -q "^[u12] .[^.]" && echo -en "(${R}unstaged changes$N) " && g=0;echo "$s" | grep -q "^\?" && echo -en "(${R}untracked changes$N) " && g=0;[ -f .git/REBASE_HEAD ] && echo -en "(${M}rebasing$N) " && g=0;[ -f .git/CHERRY_PICK_HEAD ] && echo -en "(${M}cherry pick$N) " && g=0;[ -f .git/MERGE_HEAD ] && echo -en "(${M}merging$N) " && g=0;[ -f .git/BISECT_LOG ] && echo -en "(${M}bisecting$N) " && g=0;t=$(git stash list -z --pretty=format:"A" | tr -d "\0" | wc -c);[ "$t" == "1" ] || x="es";[ "$t" != "0" ] && echo -en "($B$t$N stash$x) " && g=0;[ "$g" == "1" ] && echo -n "good";echo' \;
 ```
+{:.code-no-wrap}
 
 As an alias:
 ```bash
