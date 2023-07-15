@@ -20,19 +20,6 @@ body {
   flex-direction: column;
 }
 
-/* vertical spacing */
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 3);
-}
-
-em {
-  color: $accent-color;
-}
-
-strong {
-  color: $accent-color;
-}
-
 /* main element */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
@@ -63,48 +50,159 @@ li {
   }
 }
 
+/* vertical spacing */
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
+  margin-bottom: calc($spacing-unit / 3);
+}
+
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  color: $accent-color-lighter;
   font-weight: $base-font-weight;
+}
+
+blockquote {
+  border-left-width: 4px;
+  border-left-style: solid;
+}
+
+/* Headers */
+
+/* default colors not sibling to h1 */
+em, strong, del { color: $accent-h1; }
+blockquote { color: $accent-h1-light; border-left-color: $accent-h1-light; }
+hr { background-color: $accent-h1-dark; }
+table {
+  tr { &:nth-child(even) { background-color: $accent-h1-bg-3; } &:nth-child(odd) { background-color: $accent-h1-bg-0; } }
+  th { background-color: $accent-h1-bg-light-half; border-color: $accent-h1-dark; }
+  td { border-color: $accent-h1-bg-light; }
+}
+
+h1 {
+  color: $accent-h1-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h1; }
+  ~blockquote { color: $accent-h1-light; border-left-color: $accent-h1-light; }
+  ~hr { background-color: $accent-h1-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h1-bg-3; } &:nth-child(odd) { background-color: $accent-h1-bg-0; } }
+    th { background-color: $accent-h1-bg-light-half; border-color: $accent-h1-dark; }
+    td { border-color: $accent-h1-bg-light; }
+  }
+}
+
+h2 {
+  color: $accent-h2-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h2; }
+  ~blockquote { color: $accent-h2-light; border-left-color: $accent-h2-light; }
+  ~hr { background-color: $accent-h2-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h2-bg-3; } &:nth-child(odd) { background-color: $accent-h2-bg-0; } }
+    th { background-color: $accent-h2-bg-light-half; border-color: $accent-h2-dark; }
+    td { border-color: $accent-h2-bg-light; }
+  }
+}
+
+h3 {
+  color: $accent-h3-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h3; }
+  ~blockquote { color: $accent-h3-light; border-left-color: $accent-h3-light; }
+  ~hr { background-color: $accent-h3-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h3-bg-3; } &:nth-child(odd) { background-color: $accent-h3-bg-0; } }
+    th { background-color: $accent-h3-bg-light-half; border-color: $accent-h3-dark; }
+    td { border-color: $accent-h3-bg-light; }
+  }
+}
+
+h4 {
+  color: $accent-h4-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h4; }
+  ~blockquote { color: $accent-h4-light; border-left-color: $accent-h4-light; }
+  ~hr { background-color: $accent-h4-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h4-bg-3; } &:nth-child(odd) { background-color: $accent-h4-bg-0; } }
+    th { background-color: $accent-h4-bg-light-half; border-color: $accent-h4-dark; }
+    td { border-color: $accent-h4-bg-light; }
+  }
+}
+
+h5 {
+  color: $accent-h5-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h5; }
+  ~blockquote { color: $accent-h5-light; border-left-color: $accent-h5-light; }
+  ~hr { background-color: $accent-h5-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h5-bg-3; } &:nth-child(odd) { background-color: $accent-h5-bg-0; } }
+    th { background-color: $accent-h5-bg-light-half; border-color: $accent-h5-dark; }
+    td { border-color: $accent-h5-bg-light; }
+  }
+}
+
+h6 {
+  color: $accent-h6-lighter;
+  ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h6; }
+  ~blockquote { color: $accent-h6-light; border-left-color: $accent-h6-light; }
+  ~hr { background-color: $accent-h6-dark; }
+  ~table {
+    tr { &:nth-child(even) { background-color: $accent-h6-bg-3; } &:nth-child(odd) { background-color: $accent-h6-bg-0; } }
+    th { background-color: $accent-h6-bg-light-half; border-color: $accent-h6-dark; }
+    td { border-color: $accent-h6-bg-light; }
+  }
 }
 
 /* Links */
 a {
   color: $link-color;
   text-decoration: none;
-
   &:visited {
     color: darken($link-color, 15%);
   }
-
   &:hover {
     color: $text-color;
     text-decoration: underline;
   }
+  // .social-media-list &:hover {
+  //   // text-decoration: none;
+  //   .username {
+  //     // text-decoration: underline;
+  //   }
+  // }
+}
 
-  .social-media-list &:hover {
-    // text-decoration: none;
-
-    .username {
-      // text-decoration: underline;
-    }
+/* Tables */
+table {
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: $table-text-align;
+  color: lighten($text-color, 10%); // Make normal text lighter
+  border-collapse: collapse;
+  border-width: 1px;
+  border-style: solid;
+  th, td {
+    padding: calc($spacing-unit / 3) calc($spacing-unit / 2);
+  }
+  th {
+    border-width: 1px;
+    border-style: solid;
+  }
+  td {
+    border-width: 1px;
+    border-style: solid;
   }
 }
 
+/* Horizontal rule */
 hr {
-  color: $accent-color-dark;
-  width: calc($content-width * 3 / 4);
+  width: calc($content-width * 0.85);
+  height: $hr-line-height;
+  border: none;
+  border-radius: calc($hr-line-height / 2);
 }
 
 blockquote {
-  color: $accent-color-light;
-  border-left: 4px solid $accent-color-light;
   padding-left: calc($spacing-unit / 2);
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
-
   > :last-child {
     margin-bottom: 0;
   }
@@ -252,31 +350,5 @@ pre {
   // text-align: center
   li + li {
     padding-top: 5px;
-  }
-}
-
-/* Tables */
-table {
-  margin-bottom: $spacing-unit;
-  width: 100%;
-  text-align: $table-text-align;
-  color: lighten($text-color, 10%);
-  border-collapse: collapse;
-  border: 1px solid $background-color-light2;
-  tr {
-    &:nth-child(even) {
-      background-color: $background-color-light1;
-    }
-  }
-  th, td {
-    padding: calc($spacing-unit / 3) calc($spacing-unit / 2);
-  }
-  th {
-    background-color: $background-color-light1half;
-    border: 1px solid $background-color-light3;
-    border-bottom-color: $background-color-light2;
-  }
-  td {
-    border: 1px solid $background-color-light2;
   }
 }

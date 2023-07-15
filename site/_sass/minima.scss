@@ -2,51 +2,132 @@
 
 // Define defaults for each variable.
 
-$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
-$base-font-size:   16px !default;
-$base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
-$base-line-height: 1.5 !default;
+$base-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+$hr-line-height:   4px;
+$spacing-unit:     30px;
+$bg-mix-percent:   50%;
 
-$spacing-unit:     30px !default;
+$text-color:       #d1eff3;
+$link-color:      #4289e6;
 
-$text-color:       #d1eff3 !default;
-$link-color:      #4289e6 !default;
+$background-color: #131d25;
+$background-color-light1: #1C2A36;
+$background-color-light1half: #233443;
+$background-color-light2: #2A3E50;
+$background-color-light3: #31495E;
 
-$background-color: #131d25 !default;
-$background-color-light1: lighten($background-color, 3%);
-$background-color-light1half: lighten($background-color, 6%);
-$background-color-light2: lighten($background-color, 10%);
-$background-color-light3: lighten($background-color, 15%);
+$accent-color:      #BF1D50; // #32AD86;
+$accent-color-light: #D52059; // #41C89D;
+$accent-color-lighter: #DF2A63; //#51CDA5;
+$accent-color-dark: #7C1334; // #1C5F4A;
+$accent-color-bg-3: #530923;
+$accent-color-bg-2: #41071C;
+$accent-color-bg-1: #300514;
+$accent-color-bg-0: #1F030D;
 
-$accent-color:       #32ada7 !default;  // #da5b28
-$accent-color-light: lighten($accent-color, 15%) !default;
-$accent-color-lighter: lighten($accent-color, 25%) !default;
-$accent-color-dark:  darken($accent-color, 25%) !default;
-$accent-color-dark:  darken($accent-color, 40%) !default;
+$h1-adj-hue: 0;
+$h2-adj-hue: -30;
+$h3-adj-hue: -60;
+$h4-adj-hue: -90;
+$h5-adj-hue: -150;
+$h6-adj-hue: -180;
 
-$comment-color: hsl(43, 10%, 40%) !default;
-$string-color: hsl(35, 50%, 50%) !default;
-$string-escape: hsl(50, 70%, 70%) !default;
-$literal-color: hsl(185, 70%, 50%) !default;
-$literal-hex-color: hsl(190, 70%, 50%) !default;
-$literal-oct-color: hsl(195, 70%, 50%) !default;
-$literal-float-color: hsl(278, 60%, 60%) !default;
-$operator-color: darken($text-color, 20%) !default;
-$keyword-color: hsl(18, 50%, 60%) !default; // python def, return, class, pass
-$builtin-color: hsl(9, 55%, 55%) !default; // python builtin types (int, bool, etc)
-$pseudo-bool-color: $builtin-color !default;
-$class-color: hsl(100, 55%, 55%) !default;
-$function-color: hsl(60, 50%, 50%) !default;
-$error-color: hsl(22, 80%, 55%) !default;
-$undefined-color: hsl(300, 100%, 50%) !default;
+$accent-h1: adjust-hue($accent-color, $h1-adj-hue);
+$accent-h2: adjust-hue($accent-color, $h2-adj-hue);
+$accent-h3: adjust-hue($accent-color, $h3-adj-hue); // skip over blue color because it looks like a link
+$accent-h4: adjust-hue($accent-color, $h4-adj-hue);
+$accent-h5: adjust-hue($accent-color, $h5-adj-hue);
+$accent-h6: adjust-hue($accent-color, $h6-adj-hue);
 
-$table-text-align: left !default;
+$accent-h1-light: adjust-hue($accent-color-light, $h1-adj-hue);
+$accent-h2-light: adjust-hue($accent-color-light, $h2-adj-hue);
+$accent-h3-light: adjust-hue($accent-color-light, $h3-adj-hue);
+$accent-h4-light: adjust-hue($accent-color-light, $h4-adj-hue);
+$accent-h5-light: adjust-hue($accent-color-light, $h5-adj-hue);
+$accent-h6-light: adjust-hue($accent-color-light, $h6-adj-hue);
+
+$accent-h1-lighter: adjust-hue($accent-color-lighter, $h1-adj-hue);
+$accent-h2-lighter: adjust-hue($accent-color-lighter, $h2-adj-hue);
+$accent-h3-lighter: adjust-hue($accent-color-lighter, $h3-adj-hue);
+$accent-h4-lighter: adjust-hue($accent-color-lighter, $h4-adj-hue);
+$accent-h5-lighter: adjust-hue($accent-color-lighter, $h5-adj-hue);
+$accent-h6-lighter: adjust-hue($accent-color-lighter, $h6-adj-hue);
+
+$accent-h1-dark: adjust-hue($accent-color-dark, $h1-adj-hue);
+$accent-h2-dark: adjust-hue($accent-color-dark, $h2-adj-hue);
+$accent-h3-dark: adjust-hue($accent-color-dark, $h3-adj-hue);
+$accent-h4-dark: adjust-hue($accent-color-dark, $h4-adj-hue);
+$accent-h5-dark: adjust-hue($accent-color-dark, $h5-adj-hue);
+$accent-h6-dark: adjust-hue($accent-color-dark, $h6-adj-hue);
+
+$accent-h1-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h1-adj-hue), calc($bg-mix-percent / 5));
+$accent-h2-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h2-adj-hue), calc($bg-mix-percent / 5));
+$accent-h3-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h3-adj-hue), calc($bg-mix-percent / 5));
+$accent-h4-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h4-adj-hue), calc($bg-mix-percent / 5));
+$accent-h5-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h5-adj-hue), calc($bg-mix-percent / 5));
+$accent-h6-bg-light: mix($background-color, adjust-hue($accent-color-bg-3, $h6-adj-hue), calc($bg-mix-percent / 5));
+
+$accent-h1-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h1-adj-hue), calc($bg-mix-percent / 2.5));
+$accent-h2-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h2-adj-hue), calc($bg-mix-percent / 2.5));
+$accent-h3-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h3-adj-hue), calc($bg-mix-percent / 2.5));
+$accent-h4-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h4-adj-hue), calc($bg-mix-percent / 2.5));
+$accent-h5-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h5-adj-hue), calc($bg-mix-percent / 2.5));
+$accent-h6-bg-light-half: mix($background-color, adjust-hue($accent-color-bg-3, $h6-adj-hue), calc($bg-mix-percent / 2.5));
+
+$accent-h1-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h1-adj-hue), $bg-mix-percent);
+$accent-h2-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h2-adj-hue), $bg-mix-percent);
+$accent-h3-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h3-adj-hue), $bg-mix-percent);
+$accent-h4-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h4-adj-hue), $bg-mix-percent);
+$accent-h5-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h5-adj-hue), $bg-mix-percent);
+$accent-h6-bg-3: mix($background-color, adjust-hue($accent-color-bg-3, $h6-adj-hue), $bg-mix-percent);
+
+$accent-h1-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h1-adj-hue), $bg-mix-percent);
+$accent-h2-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h2-adj-hue), $bg-mix-percent);
+$accent-h3-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h3-adj-hue), $bg-mix-percent);
+$accent-h4-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h4-adj-hue), $bg-mix-percent);
+$accent-h5-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h5-adj-hue), $bg-mix-percent);
+$accent-h6-bg-2: mix($background-color, adjust-hue($accent-color-bg-2, $h6-adj-hue), $bg-mix-percent);
+
+$accent-h1-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h1-adj-hue), $bg-mix-percent);
+$accent-h2-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h2-adj-hue), $bg-mix-percent);
+$accent-h3-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h3-adj-hue), $bg-mix-percent);
+$accent-h4-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h4-adj-hue), $bg-mix-percent);
+$accent-h5-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h5-adj-hue), $bg-mix-percent);
+$accent-h6-bg-1: mix($background-color, adjust-hue($accent-color-bg-1, $h6-adj-hue), $bg-mix-percent);
+
+$accent-h1-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h1-adj-hue), $bg-mix-percent);
+$accent-h2-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h2-adj-hue), $bg-mix-percent);
+$accent-h3-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h3-adj-hue), $bg-mix-percent);
+$accent-h4-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h4-adj-hue), $bg-mix-percent);
+$accent-h5-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h5-adj-hue), $bg-mix-percent);
+$accent-h6-bg-0: mix($background-color, adjust-hue($accent-color-bg-0, $h6-adj-hue), $bg-mix-percent);
+
+$comment-color: hsl(43, 10%, 40%);
+$string-color: hsl(35, 50%, 50%);
+$string-escape: hsl(50, 70%, 70%);
+$literal-color: hsl(185, 70%, 50%);
+$literal-hex-color: hsl(190, 70%, 50%);
+$literal-oct-color: hsl(195, 70%, 50%);
+$literal-float-color: hsl(278, 60%, 60%);
+$operator-color: darken($text-color, 20%);
+$keyword-color: hsl(18, 50%, 60%); // python def, return, class, pass
+$builtin-color: hsl(9, 55%, 55%); // python builtin types (int, bool, etc)
+$pseudo-bool-color: $builtin-color;
+$class-color: hsl(100, 55%, 55%);
+$function-color: hsl(60, 50%, 50%);
+$error-color: hsl(22, 80%, 55%);
+$undefined-color: hsl(300, 100%, 50%);
+
+$table-text-align: left;
 
 // Width of the content area
-$content-width:    800px !default;
-$on-palm:          600px !default;
-$on-laptop:        800px !default;
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
 
 // Use media queries like this:
 // @include media-query($on-palm) {

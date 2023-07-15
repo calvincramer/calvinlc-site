@@ -2,7 +2,9 @@
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
     {%- assign page_paths = site.header_pages | default: default_paths -%}
-    <a class="brand-image" href="{{ "/" }}"><img class="brand-image" src="/assets/header-ico.png"/></a>
+    <div class="brand-image-border">
+      <a href="{{ "/" }}"><img class="brand-image" src="/assets/header-ico.png"/></a>
+    </div>
     <div class="wrapper"><a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></div>
   </div>
 </header>
