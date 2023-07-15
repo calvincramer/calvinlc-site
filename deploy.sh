@@ -11,8 +11,8 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 # Deploy
 tar -czf site.tar.gz -C _site/ .
-scp site.tar.gz calvinlc@chi110.greengeeks.net:/home/calvinlc
-ssh calvinlc@chi110.greengeeks.net '
+scp -q site.tar.gz calvinlc@chi110.greengeeks.net:/home/calvinlc
+ssh -t calvinlc@chi110.greengeeks.net '
     cd /home/calvinlc &&
     rm -rf public_html &&
     mkdir public_html &&
