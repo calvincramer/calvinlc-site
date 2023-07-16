@@ -1,5 +1,5 @@
 ---
-permalink: /404.html
+permalink: /422.shtml
 layout: default
 ---
 
@@ -12,5 +12,6 @@ layout: default
 </style>
 
 <div class="container">
-  <h2><strong>Page not found :(</strong></h2>
+  <h2><strong>422 - Unprocessable entity :(</strong></h2>
+  <a href="{{ "/" | relative_url }}">Go home</a>
 </div>

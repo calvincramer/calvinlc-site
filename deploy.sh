@@ -3,6 +3,11 @@
 set -e
 set -x
 
+if ps aww -o command | grep "jekyll serve" | grep -vq "grep"; then
+    echo "jekyll already running, will run into error when building"
+    exit 1
+fi
+
 cd "$(dirname ${BASH_SOURCE[0]})"
 cd site
 
@@ -21,3 +26,4 @@ ssh -t calvinlc@chi110.greengeeks.net '
     tar -xf site.tar.gz &&
     rm site.tar.gz
 '
+echo "Good"
