@@ -50,6 +50,22 @@ li {
   }
 }
 
+ul li {
+  list-style: disc;
+  li {
+    list-style:square;
+    li {
+      list-style:disc;
+      li {
+        list-style:square;
+        li {
+          list-style:disc;
+        }
+      }
+    }
+  }
+}
+
 /* vertical spacing */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
   margin-bottom: calc($spacing-unit / 3);
@@ -69,6 +85,7 @@ blockquote {
 
 /* default colors not sibling to h1 */
 em, strong, del { color: $accent-h1; }
+ul li::marker, ol li::marker { color: $accent-h1-almost-fg }
 blockquote { color: $accent-h1-light; border-left-color: $accent-h1-light; }
 hr { background-color: $accent-h1-dark; }
 table {
@@ -80,6 +97,7 @@ table {
 h1 {
   color: $accent-h1-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h1; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h1-almost-fg }
   ~blockquote { color: $accent-h1-light; border-left-color: $accent-h1-light; }
   ~hr { background-color: $accent-h1-dark; }
   ~table {
@@ -92,6 +110,7 @@ h1 {
 h2 {
   color: $accent-h2-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h2; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h2-almost-fg }
   ~blockquote { color: $accent-h2-light; border-left-color: $accent-h2-light; }
   ~hr { background-color: $accent-h2-dark; }
   ~table {
@@ -104,6 +123,7 @@ h2 {
 h3 {
   color: $accent-h3-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h3; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h3-almost-fg }
   ~blockquote { color: $accent-h3-light; border-left-color: $accent-h3-light; }
   ~hr { background-color: $accent-h3-dark; }
   ~table {
@@ -116,6 +136,7 @@ h3 {
 h4 {
   color: $accent-h4-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h4; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h4-almost-fg }
   ~blockquote { color: $accent-h4-light; border-left-color: $accent-h4-light; }
   ~hr { background-color: $accent-h4-dark; }
   ~table {
@@ -128,6 +149,7 @@ h4 {
 h5 {
   color: $accent-h5-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h5; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h5-almost-fg }
   ~blockquote { color: $accent-h5-light; border-left-color: $accent-h5-light; }
   ~hr { background-color: $accent-h5-dark; }
   ~table {
@@ -140,6 +162,7 @@ h5 {
 h6 {
   color: $accent-h6-lighter;
   ~em, ~strong, ~del, ~p em, ~p strong, ~p del, ~ol em, ~ol strong, ~ol del, ~ul em, ~ul strong, ~ul del { color: $accent-h6; }
+  ~ul li::marker, ~ol li::marker { color: $accent-h6-almost-fg }
   ~blockquote { color: $accent-h6-light; border-left-color: $accent-h6-light; }
   ~hr { background-color: $accent-h6-dark; }
   ~table {
@@ -148,6 +171,11 @@ h6 {
     td { border-color: $accent-h6-bg-light; }
   }
 }
+
+/* Indent paragraphs in content. I only want this if there are multiple lines in the paragraph, but it always applies */
+// .post-content p {
+//   text-indent: 0.3em;
+// }
 
 /* Links */
 a {
@@ -350,5 +378,14 @@ pre {
   // text-align: center
   li + li {
     padding-top: 5px;
+  }
+  li {
+    list-style: none;
+  }
+}
+
+.post-list {
+  li {
+    list-style: none;
   }
 }
