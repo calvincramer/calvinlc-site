@@ -221,6 +221,7 @@ table {
 /* Horizontal rule */
 hr {
   width: calc($content-width * 0.85);
+  max-width: 90vw;
   height: $hr-line-height;
   border: none;
   border-radius: calc($hr-line-height / 2);
