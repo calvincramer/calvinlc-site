@@ -16,6 +16,7 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 # Deploy
 tar -czf site.tar.gz -C _site/ .
+# New hostname on Jan 30th: chi205.greengeeks.net
 scp -q site.tar.gz calvinlc@chi110.greengeeks.net:/home/calvinlc
 ssh -t calvinlc@chi110.greengeeks.net '
     cd /home/calvinlc &&
