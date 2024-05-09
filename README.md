@@ -15,24 +15,26 @@ export PATH="${HOME}/gems/bin:${PATH}"
 `deploy.sh`
 
 
-# ETC
-- See resolution of website
+# See resolution of website
 ```sh
 dig www.calvinlc.com +nostats +nocomments +nocmd
 ```
 
-- ssh to website host
+# SSH To Web Host
+Setup:
+1. greengeeks
+2. cpanel
+3. Terminal
+4. If web terminal doesn't work, make a ticket to request support. Afterwards ssh should work.
 ```sh
-ssh calvinlc@chi110.greengeeks.net
+ssh calvinlc@chi205.greengeeks.net
 ```
 
 # Jekyll / Ruby Notes
 ```sh
 _layouts    # Generic HTML templates
 _includes   # HTML partial things, like templates too
-
 _sass  # CSS
-
 _site       # Generated site
 _plugins
 _data       # ?
