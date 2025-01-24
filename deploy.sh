@@ -2,6 +2,8 @@
 
 set -xue
 
+HOST=chi211.greengeeks.net
+
 if ps aww -o command | grep "jekyll serve" | grep -vq "grep"; then
     echo "jekyll already running, will run into error when building"
     exit 1
@@ -15,7 +17,6 @@ JEKYLL_ENV=production bundle exec jekyll build
 
 # Deploy
 tar -czf site.tar.gz -C _site/ .
-HOST=chi205.greengeeks.net
 scp -q site.tar.gz calvinlc@${HOST}:/home/calvinlc
 ssh -t calvinlc@${HOST} '
     cd /home/calvinlc &&
