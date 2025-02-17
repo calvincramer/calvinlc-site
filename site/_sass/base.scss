@@ -68,7 +68,7 @@ ul li {
 
 /* vertical spacing */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 3);
+  margin-bottom: calc($spacing-unit / 1.5);
 }
 
 /* Headings */
