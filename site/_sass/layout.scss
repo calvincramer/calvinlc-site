@@ -138,28 +138,37 @@
   margin-left: 0;
 }
 
+.footer-main {
+    display: flex;
+    // grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
 .footer-col-wrapper {
   @include relative-font-size(0.9375);
   color: $accent-color;
-  margin-left: calc(-1 * $spacing-unit / 2);
+  flex: none;
+  width: 200px;
   @extend %clearfix;
 }
 
 .footer-col {
-  float: left;
   margin-top: calc($spacing-unit / 5);
   margin-bottom: calc($spacing-unit / 2);
   padding-left: calc($spacing-unit / 2);
+  width: 100%;
 }
 
 .footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
+//   width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+//   width:         calc(100% - (#{$spacing-unit} / 2));
+  width: 100%;
 }
 
 .footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width:         calc(50% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
@@ -170,8 +179,9 @@
 @include media-query($on-laptop) {
   .footer-col-1,
   .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+    // width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+    // width:         calc(50% - (#{$spacing-unit} / 2));
+    width: 100%;
   }
 
   .footer-col-3 {
