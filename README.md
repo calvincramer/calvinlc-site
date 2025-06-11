@@ -1,12 +1,13 @@
 # Install Ruby / Jekyll
 1. `sudo apt-get install ruby-full build-essential zlib1g-dev`
-2. Add to rc:
+2. Add to `.rc` file:
 ```sh
 export GEM_HOME="${HOME}/gems"
 export PATH="${HOME}/gems/bin:${PATH}"
 ```
 3. `gem install jekyll bundler`
-
+4. cd `site`
+5. `bundle install`
 
 # Run locally
 `local.sh`
@@ -14,6 +15,7 @@ export PATH="${HOME}/gems/bin:${PATH}"
 # Build and Deploy Site
 `deploy.sh`
 
+In order to deploy you need to add ssh public key in Greengeek controls.
 
 # See resolution of website
 ```sh
@@ -34,20 +36,18 @@ ssh calvinlc@chi205.greengeeks.net
 ```sh
 _layouts    # Generic HTML templates
 _includes   # HTML partial things, like templates too
-_sass  # CSS
+_sass       # CSS
 _site       # Generated site
 _plugins
 _data       # ?
-
-
 ```
+
 - https://jekyllrb.com/docs/front-matter/
 - uses Kramdown for rendering markdown
 - `bundle info --path minima`
 - uses `liquid` for variable substitution
     - https://jekyllrb.com/docs/liquid/
 - https://shopify.github.io/liquid/
-
 
 # Compress HTML
 - https://github.com/penibelst/jekyll-compress-html/
