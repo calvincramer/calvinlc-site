@@ -273,16 +273,16 @@ pre {
 
   .highlighter-rouge & {
     background: $background-color-light1
-  }
+}
 
-  .bp    { color: $pseudo-bool-color } // Name.Builtin.Pseudo -- boolean in python
-  .c     { color: $comment-color; font-style: italic } // Comment
-  .c1    { color: $comment-color; font-style: italic } // Comment.Single
-  .cm    { color: $comment-color; font-style: italic } // Comment.Multiline
-  .cp    { color: $comment-color; font-style: italic } // Comment.Preproc
-  .cs    { color: $comment-color; font-style: italic; } // Comment.Special
-  .err   { color: $error-color; background-color: $undefined-color } // Error
-  .gr    { color: $error-color } // Generic.Error
+.bp    { color: $pseudo-bool-color } // Name.Builtin.Pseudo -- boolean in python
+.c     { color: $comment-color; font-style: italic } // Comment
+.c1    { color: $comment-color; font-style: italic } // Comment.Single
+.cm    { color: $comment-color; font-style: italic } // Comment.Multiline
+.cp    { color: $comment-color; font-style: italic } // Comment.Preproc
+.cs    { color: $comment-color; font-style: italic; } // Comment.Special
+.err   { color: $error-color; background-color: $undefined-color } // Error
+.gr    { color: $error-color } // Generic.Error
   .gt    { color: $error-color } // Generic.Traceback
   .k     { color: $keyword-color } // Keyword
   .mf    { color: $literal-float-color } // Literal.Number.Float
@@ -302,7 +302,7 @@ pre {
   .si    { color: $string-color } // Literal.String.Interpol
   .nv    { color: $keyword-color } // Name.Variable - dollar sign variable in shell
   .nt    { color: $text-color } // Name.Tag - bash flag
-
+  .nn    { color: $text-color } // Name.Namespace
 
   .gd    { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted
   .gd .x { color: $undefined-color; background-color: $undefined-color } // Generic.Deleted.Specific
@@ -323,7 +323,6 @@ pre {
   .m     { color: $undefined-color; background-color: $undefined-color } // Literal.Number
   .na    { color: $undefined-color; background-color: $undefined-color } // Name.Attribute
   .ni    { color: $undefined-color; background-color: $undefined-color } // Name.Entity
-  .nn    { color: $undefined-color; background-color: $undefined-color } // Name.Namespace
   .no    { color: $undefined-color; background-color: $undefined-color } // Name.Constant
   .sb    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Backtick
   .sc    { color: $undefined-color; background-color: $undefined-color } // Literal.String.Char
