@@ -10,7 +10,7 @@ An authentic picture of Joseph Fourier's cat from the 1800s, provided by shoddy 
 
 ---
 
-![Image](/assets/ft-fun.jpg){: width="400" .center-image }
+![Image]({{ '/assets/ft-fun.jpg' | relative_url }}){: width="400" .center-image }
 
 *The profile icon I use on this website and most sites are generated with a broken program*. It has a *bug* which produces nice looking results. Is it really a bug then?
 

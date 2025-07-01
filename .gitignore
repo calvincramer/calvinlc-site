@@ -4,3 +4,4 @@
 vendor
 site.tar.gz
 Gemfile.lock
+_site
