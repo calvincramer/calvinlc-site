@@ -20,6 +20,10 @@
 
 markdown: kramdown
 
+domain: calvincramer.github.io
+url: https://calvincramer.github.io
+baseurl: /calvinlc-site.github.io/
+
 title: Calvin Lei-Cramer
 site.author: Calvin Lei-Cramer
 email: calvincramer at gmail
