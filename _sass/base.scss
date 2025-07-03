@@ -68,7 +68,8 @@ ul li {
 
 /* vertical spacing */
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, ul, ol, dl, figure, %vertical-rhythm {
-  margin-bottom: calc($spacing-unit / 1.5);
+  margin-bottom: 20px; // calc($spacing-unit / 1.5);
+
 }
 
 /* Headings */
@@ -206,7 +207,7 @@ table {
   border-width: 1px;
   border-style: solid;
   th, td {
-    padding: calc($spacing-unit / 3) calc($spacing-unit / 2);
+    padding: 10px 15px; // calc($spacing-unit / 3) calc($spacing-unit / 2);
   }
   th {
     border-width: 1px;
@@ -220,15 +221,15 @@ table {
 
 /* Horizontal rule */
 hr {
-  width: calc($content-width * 0.85);
+  width: 680px; // calc($content-width * 0.85);
   max-width: 90vw;
   height: $hr-line-height;
   border: none;
-  border-radius: calc($hr-line-height / 2);
+  border-radius: 2px; // calc($hr-line-height / 2);
 }
 
 blockquote {
-  padding-left: calc($spacing-unit / 2);
+  padding-left: 15px; // calc($spacing-unit / 2);
   @include relative-font-size(1.125);
   letter-spacing: -1px;
   font-style: italic;
@@ -340,8 +341,7 @@ pre {
 
 /* Wrapper */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: 740px;  // calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -349,10 +349,9 @@ pre {
   @extend %clearfix;
 
   @include media-query($on-laptop) {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: calc($spacing-unit / 2);
-    padding-left: calc($spacing-unit / 2);
+    max-width: 770px; // calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: 15px; // calc($spacing-unit / 2);
+    padding-left: 15px; // calc($spacing-unit / 2);
   }
 }
 
