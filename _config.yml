@@ -20,9 +20,9 @@
 
 markdown: kramdown
 
-domain: calvincramer.github.io
-url: https://calvincramer.github.io
-baseurl: /calvinlc-site.github.io/
+domain: calvinlc.com
+url: https://calvinlc.com
+baseurl: ""
 
 title: Calvin Lei-Cramer
 site.author: Calvin Lei-Cramer
